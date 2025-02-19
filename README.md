@@ -22,11 +22,11 @@
 
 Each hero has unique abilities, such as:
 
-🔥 **Knight** – Strong melee attacks and a shield to reduce damage.
+🛡⚔ **Knight** – Strong melee attacks and a shield to reduce damage.
 
-🧙 **Mage** – Powerful ranged spells and enemy debuffs.
+🔮🔥 **Mage** – Powerful ranged spells and enemy debuffs.
 
-🏹 **Rogue** – Fast attacks and dodge mechanics.
+🗡💨 **Rogue** – Fast attacks and dodge mechanics.
 
 ## 📜 Play the Game!
 
@@ -45,6 +45,8 @@ Additional hero classes and abilities.
 Special support cards during the game (more attack, defense, increased life, additional movement during the turn, etc.)
 
 Player ranking system.
+
+Add UI and functionality on mobile and tablet devices.
 
 #
 
