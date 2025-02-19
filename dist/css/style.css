@@ -538,6 +538,9 @@
   .font-ui {
     font-family: var(--font-ui);
   }
+  .text-\[18px\] {
+    font-size: 18px;
+  }
   .text-\[60px\] {
     font-size: 60px;
   }
@@ -577,13 +580,16 @@
 body {
   font-family: var(--font-main);
   background-color: var(--color-bg);
+  color: var(--color-text);
+  max-height: 100vh;
+}
+.game-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   height: 100vh;
-  color: var(--color-text);
 }
 .btn {
   background-color: #6a4e23;
@@ -592,13 +598,11 @@ body {
   font-size: 18px;
   padding: 10px 20px;
   font-family: var(--font-ui);
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
   cursor: pointer;
   border-radius: 10px;
   position: relative;
   transition: all 0.3s linear;
+  position: relative;
 }
 .btn::before {
   content: "";
@@ -618,6 +622,14 @@ body {
 .btn:active {
   background-color: #6a4e23;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.btn img {
+  display: block;
+  position: absolute;
+  width: 20px;
+  top: -15%;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 .glow {
   box-shadow: 0 0 10px var(--color-standard);
