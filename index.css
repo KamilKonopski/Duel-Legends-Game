@@ -49,6 +49,44 @@ body {
   color: var(--color-text);
 }
 
+.btn {
+  background-color: #6a4e23;
+  border: 2px solid #3c2f1f;
+  color: var(--color-hover);
+  font-size: 18px;
+  padding: 10px 20px;
+  font-family: var(--font-ui);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 10px;
+  position: relative;
+  transition: all 0.3s linear;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: var(--color-standard);
+  border-radius: 12px;
+  z-index: -1;
+}
+
+.btn:hover {
+  background-color: #8e6d3e;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}
+
+.btn:active {
+  background-color: #6a4e23;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
 .glow {
   box-shadow: 0 0 10px var(--color-standard);
 }
@@ -56,3 +94,6 @@ body {
 .glow:hover {
   box-shadow: 0 0 20px var(--color-hover);
 }
+
+/* left polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%) */
+/* right polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%) */
