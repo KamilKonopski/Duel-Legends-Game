@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "rootDir": "./src",
-    "outDir": "./dist",
+    "rootDir": "./src/ts",
+    "outDir": "./dist/js",
     "target": "ES6"
   }
 }
