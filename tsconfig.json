@@ -4,5 +4,5 @@
     "outDir": "./dist/js",
     "target": "ES6"
   },
-  "exclude": ["node_modules", "**/*.d.ts"]
+  "exclude": ["node_modules", "src/ts/types"]
 }
