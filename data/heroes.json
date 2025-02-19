@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Sir Leon",
-    "class": "Knight 🛡⚔",
+    "heroClass": "Knight 🛡⚔",
     "playstyle": "Balanced, good defense and attack",
     "description": "Sir Leon is a noble knight who has sworn to protect the innocent and uphold justice. He is a veteran of many battles, donning his shining armor and wielding a mighty sword and shield. With a strong sense of honor, Sir Leon excels in both defense and offense, making him a reliable companion on the battlefield.",
     "abilities": [
