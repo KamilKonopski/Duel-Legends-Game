@@ -3,25 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/assets/icons/icon_sword_shield.png"
+    />
     <title>Duel Legends</title>
-    <link rel="stylesheet" href="./style.css" />
-    <script type="module" src="./dist/index.js" defer></script>
+    <link rel="stylesheet" href="./dist/css/style.css" />
+    <script type="module" src="./dist/js/index.js" defer></script>
   </head>
   <body>
-    <h1 class="text-[60px] mt-[50px]">🛡️ Duel Legends ⚔️</h1>
-    <main>
-      <button>New Game</button>
-    </main>
-    <footer>
-      <h2>
-        Created by
-        <a
-          class="text-yellow-500"
-          target="_blank"
-          href="https://github.com/KamilKonopski"
-          >Kamil Konopski</a
-        >
-      </h2>
-    </footer>
+    <div class="game-container">
+      <section class="game">
+        <h1 class="text-[60px] mt-[50px]">🛡️ Duel Legends ⚔️</h1>
+        <button id="btn-start" class="btn glow">
+          <img
+            src="./assets/icons/icon_sword_shield.png"
+            alt="swords with shield icon"
+          />New Game
+        </button>
+        <footer>
+          <span class="font-ui text-[18px]">
+            Created by
+            <a
+              class="text-standard hover:text-hover duration-200"
+              target="_blank"
+              href="https://github.com/KamilKonopski"
+              >Kamil Konopski</a
+            >
+          </span>
+        </footer>
+      </section>
+    </div>
   </body>
 </html>
