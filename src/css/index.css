@@ -44,7 +44,7 @@ body {
   max-height: 100vh;
 }
 
-.game-container {
+.game {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,6 +84,10 @@ body {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
 }
 
+.btn:hover img {
+  bottom: 80%;
+}
+
 .btn:active {
   background-color: #6a4e23;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -93,9 +97,10 @@ body {
   display: block;
   position: absolute;
   width: 20px;
-  top: -15%;
+  bottom: -25%;
   left: 50%;
   transform: translate(-50%, 0);
+  transition: all 0.2s linear;
 }
 
 .glow {
