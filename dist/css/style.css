@@ -535,11 +535,23 @@
   .static {
     position: static;
   }
+  .mt-3 {
+    margin-top: calc(var(--spacing) * 3);
+  }
   .mt-\[50px\] {
     margin-top: 50px;
   }
   .mt-\[100px\] {
     margin-top: 100px;
+  }
+  .mb-1\.5 {
+    margin-bottom: calc(var(--spacing) * 1.5);
+  }
+  .mb-2 {
+    margin-bottom: calc(var(--spacing) * 2);
+  }
+  .mb-32 {
+    margin-bottom: calc(var(--spacing) * 32);
   }
   .mb-40 {
     margin-bottom: calc(var(--spacing) * 40);
@@ -547,14 +559,30 @@
   .flex {
     display: flex;
   }
+  .w-full {
+    width: 100%;
+  }
   .flex-col {
     flex-direction: column;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .justify-between {
+    justify-content: space-between;
   }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
   }
   .gap-10 {
     gap: calc(var(--spacing) * 10);
+  }
+  .border-y {
+    border-block-style: var(--tw-border-style);
+    border-block-width: 1px;
+  }
+  .border-border {
+    border-color: var(--color-border);
   }
   .text-center {
     text-align: center;
@@ -566,6 +594,9 @@
     font-size: var(--text-4xl);
     line-height: var(--tw-leading, var(--text-4xl--line-height));
   }
+  .text-\[14px\] {
+    font-size: 14px;
+  }
   .text-\[18px\] {
     font-size: 18px;
   }
@@ -575,6 +606,19 @@
   .text-\[60px\] {
     font-size: 60px;
   }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+  .text-ability {
+    color: var(--color-ability);
+  }
+  .text-attack {
+    color: var(--color-attack);
+  }
+  .text-defense {
+    color: var(--color-defense);
+  }
   .text-full-hp {
     color: var(--color-full-hp);
   }
@@ -583,6 +627,9 @@
   }
   .text-standard {
     color: var(--color-standard);
+  }
+  .uppercase {
+    text-transform: uppercase;
   }
   .duration-200 {
     --tw-duration: 200ms;
@@ -678,6 +725,30 @@ body {
 .glow:hover {
   box-shadow: 0 0 20px var(--color-hover);
 }
+.hero-container {
+  display: flex;
+  gap: 30px;
+  margin: 50px 10px;
+}
+.hero {
+  width: 300px;
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  transition: all 0.2s linear;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 10px;
+}
+.bordered-letter {
+  text-shadow: 1px 1px 0px black, -1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black;
+}
 @keyframes spin {
   to {
     transform: rotate(360deg);
@@ -703,6 +774,15 @@ body {
     transform: none;
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
 }
 @property --tw-duration {
   syntax: "*";

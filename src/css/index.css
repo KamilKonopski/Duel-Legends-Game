@@ -110,3 +110,31 @@ body {
 .glow:hover {
   box-shadow: 0 0 20px var(--color-hover);
 }
+
+.hero-container {
+  display: flex;
+  gap: 30px;
+  margin: 50px 10px;
+}
+
+.hero {
+  width: 300px;
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  transition: all 0.2s linear;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.bordered-letter {
+  text-shadow: 1px 1px 0px black, -1px -1px 0px black, 1px -1px 0px black,
+    -1px 1px 0px black;
+}
