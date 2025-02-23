@@ -2,14 +2,14 @@
   {
     "id": 1,
     "name": "Sir Leon",
-    "heroClass": "Knight 🛡⚔",
+    "heroClass": "Knight",
     "playstyle": "Balanced, good defense and attack",
     "description": "Sir Leon is a noble knight who has sworn to protect the innocent and uphold justice. He is a veteran of many battles, donning his shining armor and wielding a mighty sword and shield. With a strong sense of honor, Sir Leon excels in both defense and offense, making him a reliable companion on the battlefield.",
     "heroImage": "./assets/heroes-splash-art/knight.jpg",
     "abilities": [
       {
         "id": 1,
-        "name": "Sword Strike ⚔",
+        "name": "Sword Strike",
         "description": "Standard attack",
         "type": "attack",
         "value": 120,
@@ -17,7 +17,7 @@
       },
       {
         "id": 2,
-        "name": "Shield Block 🛡",
+        "name": "Shield Block",
         "description": "Reduces incoming damage in the next turn",
         "type": "defence",
         "value": 0.4,
@@ -25,7 +25,7 @@
       },
       {
         "id": 3,
-        "name": "Critical Slash 💥",
+        "name": "Critical Slash",
         "description": "50% chance to deal double damage",
         "type": "effect",
         "value": 240,
@@ -33,7 +33,7 @@
       }
     ],
     "ultimate": {
-      "name": "Divine Protection ✨",
+      "name": "Divine Protection",
       "description": "For 2 turns, Sir Leon receives no damage",
       "type": "defence",
       "value": 0,
@@ -46,14 +46,14 @@
   {
     "id": 2,
     "name": "Eldrin",
-    "heroClass": "Mage 🔮🔥",
+    "heroClass": "Mage",
     "playstyle": "Strong magic attacks, weak defense",
     "description": "Eldrin is a master of the arcane arts, a powerful sorcerer with a deep connection to the elements. He is always experimenting with new spells and magic, and his power can decimate enemies with a single casting. Despite his immense magical strength, his fragile defense makes him vulnerable in close combat, which requires him to rely on his quick thinking and magical shields to stay alive.",
     "heroImage": "./assets/heroes-splash-art/mage.jpg",
     "abilities": [
       {
         "id": 1,
-        "name": "Fireball 🔥",
+        "name": "Fireball",
         "description": "Deals high fire damage",
         "type": "attack",
         "value": 180,
@@ -61,7 +61,7 @@
       },
       {
         "id": 2,
-        "name": "Magic Shield 🔵",
+        "name": "Magic Shield",
         "description": "Blocks the next incoming attack",
         "type": "defence",
         "value": 1,
@@ -69,7 +69,7 @@
       },
       {
         "id": 3,
-        "name": "Ice Bolt ❄",
+        "name": "Ice Bolt",
         "description": "Freezes the enemy for 1 turn",
         "type": "attack",
         "value": 90,
@@ -77,7 +77,7 @@
       }
     ],
     "ultimate": {
-      "name": "Elemental Storm 🌪",
+      "name": "Elemental Storm",
       "description": "Random elemental effect (fire, ice, or lightning)",
       "type": "attack",
       "value": 250,
@@ -90,14 +90,14 @@
   {
     "id": 3,
     "name": "Shadow",
-    "heroClass": "Rogue 🗡💨",
+    "heroClass": "Rogue",
     "playstyle": "Fast attacks, evasion",
     "description": "Shadow is a master of stealth and agility, striking with deadly precision from the shadows. A former thief, he has honed his skills in assassination and evasion, allowing him to avoid attacks and deal high damage in the blink of an eye. His silent movements and quick reflexes make him an elusive and dangerous foe.",
     "heroImage": "./assets/heroes-splash-art/rogue.jpg",
     "abilities": [
       {
         "id": 1,
-        "name": "Double Slash 🔪",
+        "name": "Double Slash",
         "description": "Attacks twice in one turn",
         "type": "attack",
         "value": 160,
@@ -105,7 +105,7 @@
       },
       {
         "id": 2,
-        "name": "Evasion 🚀",
+        "name": "Evasion",
         "description": "50% chance to avoid an attack",
         "type": "defence",
         "value": 0.5,
@@ -113,7 +113,7 @@
       },
       {
         "id": 3,
-        "name": "Poisoned Dagger ☠",
+        "name": "Poisoned Dagger",
         "description": "Deals damage over 3 turns",
         "type": "attack",
         "value": 120,
@@ -121,7 +121,7 @@
       }
     ],
     "ultimate": {
-      "name": "Assassin's Shadow 👥",
+      "name": "Assassin's Shadow",
       "description": "Attacks twice and evades the next incoming attack",
       "type": "attack",
       "value": 160,
@@ -134,14 +134,14 @@
   {
     "id": 4,
     "name": "Auriel",
-    "heroClass": "Paladin ✨⚔",
+    "heroClass": "Paladin",
     "playstyle": "Balanced, good defense and attack",
     "description": "Auriel is a holy warrior, devoted to protecting her allies and spreading light across the land. Armed with a sword and divine magic, she fights with both strength and compassion. Her healing powers help sustain her team, and her righteous strikes can stun enemies, giving her allies the upper hand in battle.",
     "heroImage": "./assets/heroes-splash-art/paladin.jpg",
     "abilities": [
       {
         "id": 1,
-        "name": "Holy Strike ⚡",
+        "name": "Holy Strike",
         "description": "A melee attack with additional magical damage",
         "type": "attack",
         "value": 120,
@@ -149,7 +149,7 @@
       },
       {
         "id": 2,
-        "name": "Blessing 🙏",
+        "name": "Blessing",
         "description": "Heals herself for 15% of her HP",
         "type": "defence",
         "value": 0.15,
@@ -157,7 +157,7 @@
       },
       {
         "id": 3,
-        "name": "Sacred Blow 🌟",
+        "name": "Sacred Blow",
         "description": "30% chance to stun the enemy",
         "type": "effect",
         "value": 100,
@@ -165,7 +165,7 @@
       }
     ],
     "ultimate": {
-      "name": "Last Hope 💖",
+      "name": "Last Hope",
       "description": "If HP drops below 20%, restores 50% of HP",
       "type": "defence",
       "value": 0.5,
@@ -178,14 +178,14 @@
   {
     "id": 5,
     "name": "Ragnar",
-    "heroClass": "Berserker 🩸🪓",
+    "heroClass": "Berserker",
     "playstyle": "Aggressive warrior, strong attacks, low defense",
     "description": "Ragnar is a fierce berserker who lives for battle and thrives in the heat of combat. With his massive axe, he cleaves through enemies with overwhelming strength, but his wild fighting style comes at the cost of his defense. Though reckless, Ragnar’s fury makes him an unstoppable force once unleashed.",
     "heroImage": "./assets/heroes-splash-art/berserker.jpg",
     "abilities": [
       {
         "id": 1,
-        "name": "Axe Fury 🪓",
+        "name": "Axe Fury",
         "description": "A powerful attack that lowers his defense",
         "type": "attack",
         "value": 200,
@@ -193,7 +193,7 @@
       },
       {
         "id": 2,
-        "name": "Fearless 🦾",
+        "name": "Fearless",
         "description": "Cannot be stunned for 1 turn",
         "type": "defence",
         "value": 0,
@@ -201,7 +201,7 @@
       },
       {
         "id": 3,
-        "name": "Warrior's Roar 📢",
+        "name": "Warrior's Roar",
         "description": "Increases attack power for 2 turns",
         "type": "effect",
         "value": 0.25,
@@ -209,7 +209,7 @@
       }
     ],
     "ultimate": {
-      "name": "Blood Frenzy 🔥",
+      "name": "Blood Frenzy",
       "description": "For 3 turns, Ragnar`s attacks are stronger, but he loses HP each turn",
       "type": "effect",
       "value": 240,
