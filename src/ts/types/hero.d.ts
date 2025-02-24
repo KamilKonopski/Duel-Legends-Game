@@ -1,3 +1,5 @@
+import { AbilitiesType, UltimateType } from "./abilities";
+
 export type HeroType = {
   id: number;
   name: string;
@@ -5,21 +7,8 @@ export type HeroType = {
   playstyle: string;
   description: string;
   heroImage: string;
-  abilities: {
-    id: number;
-    name: string;
-    description: string;
-    type: string;
-    value: number;
-    manaCost: number;
-  }[];
-  ultimate: {
-    name: string;
-    description: string;
-    type: string;
-    value: number;
-    manaCost: number;
-  };
+  abilities: AbilitiesType;
+  ultimate: UltimateType;
   healthPoints: number;
   mana: number;
   manaRegeneration: number;
