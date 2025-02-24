@@ -1,4 +1,4 @@
-# 🛡️ Duel Legends - Heroic Battles ⚔️
+# 🛡️ Duel Legends - Heroic Battles ⚔️ - in development
 
 🎮 **Duel Legends** is a turn-based strategy game where players choose heroes and engage in epic duels using unique offensive and defensive abilities. The goal is to strategically defeat your opponent by attacking, blocking, and using special skills!
 
@@ -32,7 +32,7 @@ Each hero has unique abilities, such as:
 
 🎮 The game is available online via GitHub Pages! Click the link below to start playing:
 
-👉 Play Duel Legends
+👉 Play Duel Legends - Link SOON
 
 ## 📌 TODO – Upcoming Features
 
