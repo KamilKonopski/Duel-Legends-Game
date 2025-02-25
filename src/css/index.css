@@ -134,6 +134,11 @@ body {
   padding: 0 10px;
 }
 
+.hero.non-clickable {
+  pointer-events: none;
+  cursor: default;
+}
+
 .bordered-letter {
   text-shadow: 1px 1px 0px black, -1px -1px 0px black, 1px -1px 0px black,
     -1px 1px 0px black;
