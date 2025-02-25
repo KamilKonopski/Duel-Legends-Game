@@ -1,7 +1,7 @@
 export default class Hero {
-    static createHero(hero) {
+    static createHero(hero, isNonClickable) {
         const heroChoice = document.createElement("div");
-        heroChoice.classList.add("hero", "glow", "bordered-letter");
+        heroChoice.classList.add("hero", "glow", "bordered-letter", ...(isNonClickable ? ["non-clickable"] : []));
         heroChoice.style.backgroundImage = `url(${hero.heroImage})`;
         heroChoice.addEventListener("click", () => this.selectedHero(hero));
         heroChoice.innerHTML = `

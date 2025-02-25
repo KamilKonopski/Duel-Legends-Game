@@ -1,9 +1,14 @@
 import { HeroType } from "../types/hero";
 
 export default class Hero {
-  static createHero(hero: HeroType) {
+  static createHero(hero: HeroType, isNonClickable: boolean) {
     const heroChoice = document.createElement("div") as HTMLDivElement;
-    heroChoice.classList.add("hero", "glow", "bordered-letter");
+    heroChoice.classList.add(
+      "hero",
+      "glow",
+      "bordered-letter",
+      ...(isNonClickable ? ["non-clickable"] : [])
+    );
     heroChoice.style.backgroundImage = `url(${hero.heroImage})`;
     heroChoice.addEventListener("click", () => this.selectedHero(hero));
 
