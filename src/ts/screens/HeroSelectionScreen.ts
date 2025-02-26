@@ -26,7 +26,7 @@ export default class HeroSelectionScreen {
     heroChoiceContainer.classList.add("hero-container");
 
     heroes.forEach((hero) =>
-      heroChoiceContainer.appendChild(Hero.createHero(hero))
+      heroChoiceContainer.appendChild(Hero.createHero(hero, false))
     );
 
     return heroChoiceContainer;

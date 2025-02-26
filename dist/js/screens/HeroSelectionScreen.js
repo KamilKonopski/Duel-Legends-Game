@@ -27,7 +27,7 @@ export default class HeroSelectionScreen {
     static createHeroChoiceContainer(heroes) {
         const heroChoiceContainer = document.createElement("div");
         heroChoiceContainer.classList.add("hero-container");
-        heroes.forEach((hero) => heroChoiceContainer.appendChild(Hero.createHero(hero)));
+        heroes.forEach((hero) => heroChoiceContainer.appendChild(Hero.createHero(hero, false)));
         return heroChoiceContainer;
     }
     static createPlayButton() {
