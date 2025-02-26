@@ -6,8 +6,8 @@
 @theme {
   --color-bg: var(--color-bg);
   --color-text: var(--color-text);
-  --color-full-hp: var(--color-full-hp);
-  --color-low-hp: var(--color-low-hp);
+  --color-mana: var(--color-mana);
+  --color-hp: var(--color-hp);
   --color-standard: var(--color-standard);
   --color-hover: var(--color-hover);
   --color-attack: var(--color-attack);
@@ -23,8 +23,8 @@
 :root {
   --color-bg: #1e1b2d; /*Tło gry */
   --color-text: #eae0c8; /* Tekst podstawowy */
-  --color-full-hp: #4caf50; /* Pasek zdrowia – pełny */
-  --color-low-hp: #e63946; /* Pasek zdrowia – niski HP */
+  --color-mana: #3d3dff; /* Pasek zdrowia – pełny */
+  --color-hp: #e60000; /* Pasek zdrowia – niski HP */
   --color-standard: #c9a227; /* Przyciski standardowe */
   --color-hover: #e1c16e; /* Przyciski po najechaniu */
   --color-attack: #b22222; /* Przyciski – atak */
