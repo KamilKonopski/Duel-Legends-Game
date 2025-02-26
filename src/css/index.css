@@ -27,9 +27,9 @@
   --color-hp: #e60000; /* Pasek zdrowia – niski HP */
   --color-standard: #c9a227; /* Przyciski standardowe */
   --color-hover: #e1c16e; /* Przyciski po najechaniu */
-  --color-attack: #b22222; /* Przyciski – atak */
-  --color-defense: #3d5a80; /* Przyciski – obrona */
-  --color-ability: #6a0572; /* Przyciski – umiejętności */
+  --color-attack: #f52f2f; /* Przyciski – atak */
+  --color-defense: #3f8cc0; /* Przyciski – obrona */
+  --color-ability: #be45c7; /* Przyciski – umiejętności */
   --color-fight-bg: #2b2b2b; /* Tło panelu walki */
   --color-history-bg: #3b2f2f; /* Tło historii walki */
   --color-border: #a8a8a8; /* Obramowania / Akcenty */
