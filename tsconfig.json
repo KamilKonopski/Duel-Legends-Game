@@ -2,7 +2,8 @@
   "compilerOptions": {
     "rootDir": "./src/ts",
     "outDir": "./dist/js",
-    "target": "ES6"
+    "module": "ES2022",
+    "target": "ES2022"
   },
   "exclude": ["node_modules", "src/ts/types"]
 }
