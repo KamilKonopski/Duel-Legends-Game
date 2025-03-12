@@ -1,10 +1,20 @@
+import { HeroType } from "../types/hero";
+
 export default class Hero {
-    static createHero(hero, isNonClickable) {
-        const heroChoice = document.createElement("div");
-        heroChoice.classList.add("hero", "glow", "bordered-letter", ...(isNonClickable ? ["non-clickable"] : []));
-        heroChoice.style.backgroundImage = `url(${hero.heroImage})`;
-        heroChoice.addEventListener("click", () => this.selectedHero(hero));
-        heroChoice.innerHTML = `
+  static createHero(hero: HeroType, isNonClickable: boolean) {
+    const heroChoice = document.createElement("div") as HTMLDivElement;
+    heroChoice.classList.add(
+      "hero",
+      "glow",
+      "bordered-letter",
+      ...(isNonClickable ? ["non-clickable"] : [])
+    );
+    heroChoice.style.backgroundImage = `url(${hero.heroImage})`;
+    heroChoice.addEventListener("click", () => {
+      this.selectedHero(hero);
+    });
+
+    heroChoice.innerHTML = `
         <div class="mb-1.5 text-[14px] flex flex-col items-center border-y border-border w-full">
           <span class="uppercase font-bold">${hero.name}</span>
           <span>${hero.heroClass}</span>
@@ -20,9 +30,11 @@ export default class Hero {
         <span class="text-standard">ULT: ${hero.ultimate.name}</span>
         </div>
         `;
-        return heroChoice;
-    }
-    static selectedHero(hero) {
-        return hero.id;
-    }
+
+    return heroChoice;
+  }
+
+  static selectedHero(hero: HeroType) {
+    return hero.id;
+  }
 }

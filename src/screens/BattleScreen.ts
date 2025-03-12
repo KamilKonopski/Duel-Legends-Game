@@ -1,31 +1,30 @@
 import { HeroType } from "../types/hero";
 
-import { fetchHeroesData } from "../services/fetchHeroesData.js";
-
-import Hero from "../logic/Hero.js";
+import Hero from "../logic/Hero";
 
 export default class BattleScreen {
-  static async createBattleScreen() {
-    const heroes: HeroType[] = await fetchHeroesData();
-
-    const selectedHero = heroes.find((hero) => hero.id === 4);
+  static async createBattleScreen(heroes: HeroType[], playerName: string) {
+    const selectedHero = heroes.find(
+      (hero) => hero.id === Hero.selectedHero(hero)
+    );
 
     const battle = document.createElement("section") as HTMLDivElement;
     battle.classList.add("game");
     battle.style.justifyContent = "normal";
-    battle.dataset.screen = "3";
 
     battle.appendChild(
-      this.createBattleHeroesContainer(selectedHero, heroes[0])
+      this.createBattleHeroesContainer(selectedHero, heroes[0], playerName)
     );
     battle.appendChild(this.createControlPanel());
+    battle.appendChild(this.createBattleHistory(1, "Player 1", 40));
 
     return battle;
   }
 
   private static createBattleHeroesContainer(
-    firstSelectedHero: HeroType,
-    secondSelectedHero: HeroType
+    firstSelectedHero: HeroType | [],
+    secondSelectedHero: HeroType,
+    playerName: string
   ) {
     const battleHeroesContainer = document.createElement(
       "div"
@@ -41,7 +40,7 @@ export default class BattleScreen {
     );
 
     battleHeroesContainer.appendChild(
-      this.choosenHero(firstSelectedHero, "Player 1")
+      this.choosenHero(firstSelectedHero, playerName)
     );
     battleHeroesContainer.appendChild(
       this.choosenHero(secondSelectedHero, "Computer")
@@ -160,5 +159,31 @@ export default class BattleScreen {
     controlButton.addEventListener("click", buttonAction);
 
     return controlButton;
+  }
+
+  private static createBattleHistory(
+    turn: number,
+    player: string,
+    value: number
+  ) {
+    const battleHistoryContainer = document.createElement(
+      "div"
+    ) as HTMLDivElement;
+    battleHistoryContainer.classList.add(
+      "bg-history-bg",
+      "w-[1200px]",
+      "h-[100px]",
+      "mt-5"
+    );
+
+    const battleHistoryMessage = document.createElement(
+      "p"
+    ) as HTMLParagraphElement;
+    battleHistoryMessage.classList.add("text-[16px]", "p-2");
+    battleHistoryMessage.innerText = `Turn ${turn} - ${player} dealt ${value} damage`;
+
+    battleHistoryContainer.appendChild(battleHistoryMessage);
+
+    return battleHistoryContainer;
   }
 }

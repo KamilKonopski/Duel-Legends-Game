@@ -1,13 +1,9 @@
 import { HeroType } from "../types/hero";
 
-import { fetchHeroesData } from "../services/fetchHeroesData.js";
-
-import Hero from "../logic/Hero.js";
+import Hero from "../logic/Hero";
 
 export default class HeroSelectionScreen {
-  static async createHeroSelectionScreen() {
-    const heroes: HeroType[] = await fetchHeroesData();
-
+  static async createHeroSelectionScreen(heroes: HeroType[]) {
     const heroSelection = document.createElement("section") as HTMLDivElement;
     heroSelection.classList.add("game");
     heroSelection.dataset.screen = "2";
@@ -25,9 +21,9 @@ export default class HeroSelectionScreen {
     const heroChoiceContainer = document.createElement("div") as HTMLDivElement;
     heroChoiceContainer.classList.add("hero-container");
 
-    heroes.forEach((hero) =>
-      heroChoiceContainer.appendChild(Hero.createHero(hero, false))
-    );
+    heroes.forEach((hero) => {
+      heroChoiceContainer.appendChild(Hero.createHero(hero, false));
+    });
 
     return heroChoiceContainer;
   }
@@ -35,6 +31,7 @@ export default class HeroSelectionScreen {
   private static createPlayButton() {
     const playButton = document.createElement("button") as HTMLButtonElement;
     playButton.classList.add("mb-32", "btn", "glow");
+    playButton.id = "btn-play";
     playButton.innerText = "PLAY";
 
     return playButton;

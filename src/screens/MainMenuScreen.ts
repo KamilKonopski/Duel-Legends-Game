@@ -2,7 +2,6 @@ export default class MainMenuScreen {
   static createMainMenuScreen() {
     const mainMenu = document.createElement("section") as HTMLDivElement;
     mainMenu.classList.add("game");
-    mainMenu.dataset.screen = "1";
     mainMenu.innerHTML = `
     <h1 class="text-[60px] mt-[50px]">🛡️ Duel Legends ⚔️</h1>
     <div>
@@ -10,7 +9,7 @@ export default class MainMenuScreen {
     </div>
     <button id="btn-start" class="btn glow">
       <img
-        src="./assets/icons/icon_sword_shield.png"
+        src="./src/assets/icons/icon_sword_shield.png"
         alt="swords with shield icon"
         />New Game
     </button>
