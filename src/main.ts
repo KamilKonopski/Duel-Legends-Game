@@ -1,9 +1,7 @@
-import "./index.css";
+import "/src/index.css";
+import { Renderer } from "./ui/Renderer";
 
-import Game from "./logic/Game";
+const app = document.getElementById("app");
+if (!app) throw new Error("Element #app not found");
 
-import { fetchHeroesData } from "./services/fetchHeroesData";
-
-const game = new Game(await fetchHeroesData());
-
-game.startGame();
+new Renderer(app).renderHeroSelect();
