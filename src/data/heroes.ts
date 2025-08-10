@@ -1,5 +1,12 @@
 import type { HeroConfig } from "../entities/Hero";
 
+const knightImg = "assets/heroes-splash-art/knight.jpg";
+const mageImg = "assets/heroes-splash-art/mage.jpg";
+
+const rogueImg = "assets/heroes-splash-art/rogue.jpg";
+const paladinImg = "assets/heroes-splash-art/paladin.jpg";
+const berserkerImg = "assets/heroes-splash-art/berserker.jpg";
+
 export const HEROES: HeroConfig[] = [
   {
     id: 1,
@@ -8,7 +15,7 @@ export const HEROES: HeroConfig[] = [
     playstyle: "Balanced, good defense and attack",
     description:
       "Sir Leon is a noble knight who has sworn to protect the innocent and uphold justice.",
-    heroImage: "/src/assets/heroes-splash-art/knight.jpg",
+    heroImage: knightImg,
     abilities: [
       {
         id: 1,
@@ -53,7 +60,7 @@ export const HEROES: HeroConfig[] = [
     heroClass: "Mage",
     playstyle: "Strong magic attacks, weak defense",
     description: "Eldrin is a master of the arcane arts, a powerful sorcerer.",
-    heroImage: "/src/assets/heroes-splash-art/mage.jpg",
+    heroImage: mageImg,
     abilities: [
       {
         id: 1,
@@ -97,7 +104,7 @@ export const HEROES: HeroConfig[] = [
     heroClass: "Rogue",
     playstyle: "Fast attacks, evasion",
     description: "Shadow is a master of stealth and agility.",
-    heroImage: "/src/assets/heroes-splash-art/rogue.jpg",
+    heroImage: rogueImg,
     abilities: [
       {
         id: 1,
@@ -141,7 +148,7 @@ export const HEROES: HeroConfig[] = [
     heroClass: "Paladin",
     playstyle: "Balanced, healing & defense",
     description: "Auriel is a holy warrior, devoted to protecting allies.",
-    heroImage: "/src/assets/heroes-splash-art/paladin.jpg",
+    heroImage: paladinImg,
     abilities: [
       {
         id: 1,
@@ -185,7 +192,7 @@ export const HEROES: HeroConfig[] = [
     heroClass: "Berserker",
     playstyle: "Aggressive: strong attacks, low defense",
     description: "Ragnar is a fierce berserker who lives for battle.",
-    heroImage: "/src/assets/heroes-splash-art/berserker.jpg",
+    heroImage: berserkerImg,
     abilities: [
       {
         id: 1,
