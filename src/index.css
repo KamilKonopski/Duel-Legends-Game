@@ -175,6 +175,13 @@ body {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* active hero card  */
+.hero-card.active {
+  outline: 3px solid var(--color-standard);
+  outline-offset: -3px;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+}
+
 /* responsive helper */
 @media (max-width: 768px) {
   .hero-splash {

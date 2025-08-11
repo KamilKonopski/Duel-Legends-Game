@@ -73,6 +73,12 @@ export class Renderer {
           return;
         }
 
+        this.root
+          .querySelectorAll(".hero-card")
+          .forEach((c) => c.classList.remove("active"));
+
+        card.classList.add("active");
+
         this.game = new Game(new Hero(playerCfg), new Hero(enemyCfg));
       });
     });
@@ -132,7 +138,6 @@ export class Renderer {
     this.root.innerHTML = `
       <div class="max-w-6xl w-full mx-auto">
         <div class="flex items-center justify-between mb-4">
-          <button id="backBtn" class="btn btn-standard">Wróć do wyboru</button>
           <div class="text-center">
             <h2 class="text-2xl font-semibold">Duel</h2>
             <p class="text-sm opacity-80">Twoja tura: <strong>${
@@ -205,11 +210,6 @@ export class Renderer {
         </div>
       </div>
     `;
-
-    // back button
-    this.root
-      .querySelector("#backBtn")!
-      .addEventListener("click", () => this.renderHeroSelect());
 
     this.mountActions();
     this.updateLog();
