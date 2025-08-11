@@ -1,6 +1,7 @@
 import { HEROES } from "../data/heroes";
 import { Hero } from "../entities/Hero";
 import { Game } from "../game/Game";
+import { GameEndModal } from "./GameEndModal";
 
 function clamp(n: number, a = 0, b = 100) {
   return Math.max(a, Math.min(b, n));
@@ -54,28 +55,57 @@ export class Renderer {
     ).join("");
 
     // click handlers
-    this.root.querySelectorAll(".hero-card").forEach((el) => {
-      el.addEventListener("click", () => {
-        const id = Number((el as HTMLElement).dataset.id);
-        // jeśli klikamy w przycisk 'Wybierz' lub kartę -> start gry z tym bohaterem
-        const playerCfg = HEROES.find((h) => h.id === id)!;
-        const enemyCfg = HEROES.find((h) => h.id !== id)!; // prosty wybór innego
+    this.root.querySelectorAll(".select-btn").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const card = btn.closest(".hero-card") as HTMLElement;
+        const id = Number(card.dataset.id);
+
+        const playerCfg = HEROES.find((h) => h.id === id);
+        if (!playerCfg) {
+          console.error(`Nie znaleziono bohatera o id=${id}`);
+          return;
+        }
+
+        const enemyCfg = HEROES.find((h) => h.id !== id);
+        if (!enemyCfg) {
+          console.error("Brak dostępnych przeciwników!");
+          return;
+        }
+
         this.game = new Game(new Hero(playerCfg), new Hero(enemyCfg));
-        this.renderBattle();
       });
     });
 
     // shuffle button -> random enemy preview
     const shuffle = this.root.querySelector("#shuffleBtn") as HTMLButtonElement;
     shuffle.addEventListener("click", () => {
-      const r = Math.floor(Math.random() * HEROES.length);
-      alert(`Losowy przeciwnik: ${HEROES[r].name}`);
+      if (!this.game?.player) {
+        alert("Najpierw wybierz swojego bohatera!");
+        return;
+      }
+
+      const playerId = this.game.player.cfg.id;
+      const availableOpponents = HEROES.filter((h) => h.id !== playerId);
+      const enemyCfg =
+        availableOpponents[
+          Math.floor(Math.random() * availableOpponents.length)
+        ];
+
+      this.game.enemy = new Hero(enemyCfg);
+      this.renderBattle();
     });
   }
 
   renderBattle() {
     if (!this.game) return;
     const { player, enemy } = this.game;
+
+    this.game.onGameEnd = (result) => {
+      new GameEndModal(result, () => {
+        this.renderHeroSelect();
+      });
+    };
 
     // calculate bar widths
     const playerHpPct = clamp(
