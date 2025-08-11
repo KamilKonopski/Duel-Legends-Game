@@ -97,7 +97,6 @@ body {
   transition: transform 0.18s ease, box-shadow 0.18s ease;
   border-radius: 8px;
   overflow: hidden;
-  cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.04);
 }
 .hero-card:hover {
