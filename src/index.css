@@ -154,6 +154,26 @@ body {
 .hit-flash {
   animation: pulseHit 0.22s ease-in-out;
 }
+/* modal */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: var(--hp-bg);
+  color: var(--color-text);
+  font-size: 20px;
+  padding: 4rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
 
 /* responsive helper */
 @media (max-width: 768px) {
