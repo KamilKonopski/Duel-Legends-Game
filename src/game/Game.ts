@@ -5,6 +5,7 @@ import { SimpleAI } from "../ai/SimpleAI";
 export class Game {
   engine: Engine;
   turn: "player" | "enemy" = "player";
+  onGameEnd?: (result: "win" | "lose") => void;
   constructor(public player: Hero, public enemy: Hero) {
     this.engine = new Engine(player, enemy);
   }
@@ -71,10 +72,16 @@ export class Game {
 
   checkEnd() {
     if (!this.player.isAlive() || !this.enemy.isAlive()) {
+      const result: "win" | "lose" = this.player.isAlive() ? "win" : "lose";
       const winner = this.player.isAlive()
         ? this.player.cfg.name
         : this.enemy.cfg.name;
+
       this.engine.addLog(`Koniec gry. Zwycięzca: ${winner}`);
+
+      if (this.onGameEnd) {
+        this.onGameEnd(result);
+      }
     }
   }
 }
