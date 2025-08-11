@@ -32,7 +32,7 @@ Each hero has unique abilities, such as:
 
 🎮 The game is available online via GitHub Pages! Click the link below to start playing:
 
-👉 Play Duel Legends - Link SOON
+👉 Play Duel Legends - [Link](https://kamilkonopski.github.io/Duel-Legends-Game/)
 
 ## 📌 TODO – Upcoming Features
 
